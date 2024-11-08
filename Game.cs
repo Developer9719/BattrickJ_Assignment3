@@ -18,7 +18,9 @@ namespace Game10003
         /// </summary>
         public void Setup()
         {
-
+            Window.SetSize(800, 600);
+            Window.SetTitle("Ball vs Brick");
+            Window.TargetFPS = 60;
         }
 
         /// <summary>
@@ -26,7 +28,7 @@ namespace Game10003
         /// </summary>
         public void Update()
         {
-
+            Window.ClearBackground(Color.OffWhite);
         }
     }
 }
