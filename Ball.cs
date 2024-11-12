@@ -35,7 +35,7 @@ namespace Game10003
         private void userInteraction()
         {
             // Check if the ball is at the bottom of the screen
-            if ()
+            //if ()
             {
                 // If ball is at the bottom of the screen stop its motion
 
