@@ -11,6 +11,7 @@ namespace Game10003
         // Variables
         int randomYPos;
         int randomXPos;
+        int radius;
 
         // Constructor
         public Brick()
@@ -22,23 +23,18 @@ namespace Game10003
         // Draw brick
         private void createBrick()
         {
-            // Generate a random number of blocks to display
-            int brickCount = Random.Integer(96);
-
             // Randomizes the placement of each block
             randomXPos = Random.Integer(750);
             randomYPos = Random.Integer(300); // The lowest the bricks will be rendered is at (0,350), the value is set at 300 to give room to draw the brick.
+            radius = 50;
 
             // Brick Properties
             Draw.LineColor = Color.Black;
             Draw.LineSize = 1;
             Draw.FillColor = Color.Red;
 
-            for (int i = 0; i < brickCount; i++)
-            {
-                // Draws the brick in the random position
-                Draw.Square(randomXPos, randomYPos, 50);
-            }
+            // Draws the brick in the random position
+            Draw.Square(randomXPos, randomYPos, 50);
         }
 
         private void endGameLogic(int brickCount)

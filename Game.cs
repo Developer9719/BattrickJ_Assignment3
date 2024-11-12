@@ -12,6 +12,9 @@ namespace Game10003
     public class Game
     {
         // Place your variables here:
+        int randomXPos;
+        int randomYPos;
+        int radius;
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -21,6 +24,20 @@ namespace Game10003
             Window.SetSize(800, 600);
             Window.SetTitle("Ball vs Brick");
             Window.TargetFPS = 60;
+
+            createAllBricks();
+        }
+
+        public void createAllBricks()
+        {
+            // Generate a random number of blocks to display
+            int brickCount = Random.Integer(96);
+
+            for (int i = 0; i < brickCount; i++)
+            {
+                // Create the bricks
+                Brick gameBrick = new Brick();
+            }
         }
 
         /// <summary>
