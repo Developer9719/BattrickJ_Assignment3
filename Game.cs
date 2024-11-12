@@ -1,4 +1,5 @@
 ﻿// Include code libraries you need below (use the namespace).
+using Game10003;
 using System;
 using System.Numerics;
 
@@ -11,7 +12,6 @@ namespace Game10003
     public class Game
     {
         // Place your variables here:
-
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -29,6 +29,20 @@ namespace Game10003
         public void Update()
         {
             Window.ClearBackground(Color.OffWhite);
+            
+            // Draw Game Borders: Not doing anything yet
+            Draw.LineColor = Color.Black;
+            Draw.LineSize = 1;
+            Draw.Line(0, 600, 800, 600);
+            Draw.Line(0, 0, 0, 600);
+            Draw.Line(0, 0, 800, 0);
+            Draw.Line(800, 0, 800, 600);
+            
+            // Create players ball
+            Ball playerBall = new Ball();
+
+            // Create new bricks
+            Brick gameBricks = new Brick();
         }
     }
 }
