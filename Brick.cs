@@ -16,6 +16,7 @@ namespace Game10003
         // Constructor
         public Brick()
         {
+            // Draws the brick in a different place each frame
             createBrick();
         }
 
@@ -45,11 +46,11 @@ namespace Game10003
                 
 
                 // Calls the ballCollisionWithBrick on each generated brick 
-                ballCollisionWithBrick(brickNumber);
+                ballCollisionWithBrick(brickCount);
             }
         }
 
-        private void ballCollisionWithBrick(int brickNumber, int brickCount)
+        private void ballCollisionWithBrick(int brickCount)
         {
             if (brickNumber <= 0)
             {
