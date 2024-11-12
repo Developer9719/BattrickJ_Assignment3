@@ -38,18 +38,7 @@ namespace Game10003
             {
                 // Draws the brick in the random position
                 Draw.Square(randomXPos, randomYPos, 50);
-
-                // Calls the ballCollisionWithBrick on each generated brick 
-                ballCollisionWithBrick(brickCount);
             }
-        }
-
-        private void ballCollisionWithBrick(int brickCount)
-        {
-            // Destroy brick
-
-            // Update brick counter
-
         }
 
         private void endGameLogic(int brickCount)
