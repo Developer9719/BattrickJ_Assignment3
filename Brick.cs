@@ -12,21 +12,18 @@ namespace Game10003
         int brickNumber;
         int randomYPos;
         int randomXPos;
-        int[] brickID;
 
         // Constructor
         public Brick()
         {
             createBrick();
-            ballCollisionWithBrick();
         }
 
         // Draw brick
         private void createBrick()
         {
             // Randomly generate a random number of blocks to display
-            int blockCount = Random.Integer(96);
-            brickID = new int[blockCount];
+            int brickCount = Random.Integer(96);
 
             // Randomizes the collision number
             brickNumber = Random.Integer(150);
@@ -40,23 +37,43 @@ namespace Game10003
             Draw.LineSize = 1;
             Draw.FillColor = Color.Red;
 
-            for (int i = 0; i < blockCount; i++)
+            for (int i = 0; i < brickCount; i++)
             {
-                // Draws the brick and assigns its position to an array be called on later
+                // Draws the brick
                 Draw.Square(randomXPos, randomYPos, 50);
                 // Figure out how to place the number inside the brick
+                
+
+                // Calls the ballCollisionWithBrick on each generated brick 
+                ballCollisionWithBrick(brickNumber);
             }
         }
 
-        private void ballCollisionWithBrick(/* Get current number count on current brick and the brick ID */)
+        private void ballCollisionWithBrick(int brickNumber, int brickCount)
         {
             if (brickNumber <= 0)
             {
                 // Destroy the brick
+
+                // Update brick counter with the actual number of bricks left
+                brickCount--;
             } else
             {
                 brickNumber--; // Remove one number from the brick collision counter
                 // Redraw the brick in the same position with the new collision counter number
+            }
+        }
+
+        private void endGameLogic(int brickCount)
+        {
+            if (brickCount <= 0)
+            {
+                // Freeze all motion in game
+
+
+                // Display game win message
+
+                Text.Draw("!!!WINNER WINNER!!!", 300, 300);
             }
         }
     }   
