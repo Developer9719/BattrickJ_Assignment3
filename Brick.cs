@@ -22,7 +22,7 @@ namespace Game10003
         // Draw brick
         private void createBrick()
         {
-            // Randomly generate a random number of blocks to display
+            // Generate a random number of blocks to display
             int brickCount = Random.Integer(96);
 
             // Randomizes the collision number
@@ -39,7 +39,7 @@ namespace Game10003
 
             for (int i = 0; i < brickCount; i++)
             {
-                // Draws the brick
+                // Draws the brick in the random position
                 Draw.Square(randomXPos, randomYPos, 50);
                 // Figure out how to place the number inside the brick
                 
@@ -72,7 +72,6 @@ namespace Game10003
 
 
                 // Display game win message
-
                 Text.Draw("!!!WINNER WINNER!!!", 300, 300);
             }
         }
