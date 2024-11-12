@@ -9,7 +9,6 @@ namespace Game10003
     public class Brick
     {
         // Variables
-        int brickNumber;
         int randomYPos;
         int randomXPos;
 
@@ -26,9 +25,6 @@ namespace Game10003
             // Generate a random number of blocks to display
             int brickCount = Random.Integer(96);
 
-            // Randomizes the collision number
-            brickNumber = Random.Integer(150);
-
             // Randomizes the placement of each block
             randomXPos = Random.Integer(750);
             randomYPos = Random.Integer(300); // The lowest the bricks will be rendered is at (0,350), the value is set at 300 to give room to draw the brick.
@@ -42,8 +38,6 @@ namespace Game10003
             {
                 // Draws the brick in the random position
                 Draw.Square(randomXPos, randomYPos, 50);
-                // Figure out how to place the number inside the brick
-                
 
                 // Calls the ballCollisionWithBrick on each generated brick 
                 ballCollisionWithBrick(brickCount);
@@ -52,17 +46,10 @@ namespace Game10003
 
         private void ballCollisionWithBrick(int brickCount)
         {
-            if (brickNumber <= 0)
-            {
-                // Destroy the brick
+            // Destroy brick
 
-                // Update brick counter with the actual number of bricks left
-                brickCount--;
-            } else
-            {
-                brickNumber--; // Remove one number from the brick collision counter
-                // Redraw the brick in the same position with the new collision counter number
-            }
+            // Update brick counter
+
         }
 
         private void endGameLogic(int brickCount)
