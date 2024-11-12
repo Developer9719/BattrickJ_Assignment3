@@ -57,9 +57,6 @@ namespace Game10003
             
             // Create players ball
             Ball playerBall = new Ball();
-
-            // Create the game bricks
-            Brick gameBricks = new Brick();
         }
     }
 }
