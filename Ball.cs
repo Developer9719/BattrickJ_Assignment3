@@ -19,7 +19,6 @@ namespace Game10003
         {
             createBall();
             collisionDetection();
-            collisionResolution();
         }
 
         private void createBall() 
@@ -47,12 +46,12 @@ namespace Game10003
 
         private void collisionDetection()
         {
-
+            // Decides whether the ball hits a wall, a block or the bottom of the window
         }
 
-        private void collisionResolution()
+        private void collisionResolution(string collisionType)
         {
-
+            // Do something with the collision
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Game10003
         int randomXPos;
         int randomYPos;
         int radius;
+        Brick[] bricks = new Brick[96];
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -35,8 +36,8 @@ namespace Game10003
 
             for (int i = 0; i < brickCount; i++)
             {
-                // Create the bricks
-                Brick gameBrick = new Brick();
+                //put each brick in array
+                bricks[i] = new Brick();
             }
         }
 
