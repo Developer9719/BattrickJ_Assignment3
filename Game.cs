@@ -26,7 +26,7 @@ namespace Game10003
             Window.SetTitle("Ball vs Brick");
             Window.TargetFPS = 60;
 
-            createAllBricks();
+            
         }
 
         public void createAllBricks()
@@ -58,6 +58,8 @@ namespace Game10003
             
             // Create players ball
             Ball playerBall = new Ball();
+            
+            createAllBricks();
         }
     }
 }
